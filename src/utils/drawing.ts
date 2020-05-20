@@ -20,8 +20,8 @@ export const setText = (context: CanvasRenderingContext2D, options: StyleOptions
 
     context.fillStyle = combined.color;
     context.font = `${combined.fontSize} ${combined.fontFamily}`;
-    // ctx.fillText("width:" + ctx.measureText(txt).width, 10, 50)
-    context.fillText(combined.text, combined.x, combined.y);
+    const xOffset = context.measureText(combined.text).width;
+    context.fillText(combined.text, combined.x - xOffset, combined.y);
 }
 
 export const drawCell = (context: CanvasRenderingContext2D, cell: Cell) => {
