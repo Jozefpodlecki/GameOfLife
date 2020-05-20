@@ -14,12 +14,12 @@ export default () => {
     canvas.height = height;
 
     let gridOptions = {
-        xOffset: 0,
-        yOffset: 100,
-        width: width,
-        height: height - 200,
+        xOffset: width / 5,
+        yOffset: height / 9,
+        width: width / 2,
+        height: height / 1.5,
         rows: 100,
-        columns: 90
+        columns: 100
     }
 
     canvas.addEventListener("mousemove", (event) => {
@@ -133,7 +133,7 @@ export default () => {
 
         setText(context, {
             text: `Alive cells ${aliveCells}`,
-            x: width / 50,
+            x: width / 5,
             y: height / 10
         })
 
